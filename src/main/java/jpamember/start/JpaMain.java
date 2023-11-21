@@ -22,7 +22,7 @@ public class JpaMain {
     }
 
     public static void logic(EntityManager em) {
-        String id = "id3";
+        String id = "id4";
         Member member = new Member();
         member.setId(id);
         member.setUsername("LEE");
@@ -40,5 +40,8 @@ public class JpaMain {
         // 목록 조회
         List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
         System.out.println("members : " + members.size());
+
+        // 삭제
+        em.remove(member);
     }
 }
