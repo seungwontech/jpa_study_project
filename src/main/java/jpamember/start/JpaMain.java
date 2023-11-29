@@ -22,6 +22,11 @@ public class JpaMain {
     }
 
     public static void logic(EntityManager em) {
+        Board board = new Board();
+        em.persist(board);
+        System.out.println("board.id = " + board.getId());
+
+        /*
         String id = "id4";
         Member member = new Member();
         member.setId(id);
@@ -43,5 +48,6 @@ public class JpaMain {
 
         // 삭제
         em.remove(member);
+        */
     }
 }

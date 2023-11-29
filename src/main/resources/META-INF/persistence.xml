@@ -17,7 +17,9 @@
             <!-- 쿼리문 위에 주석 출력해주는 설정 -->
             <property name="hibernate.use_sql_comments" value="true"/>
             <!-- 스키마 자동 생성 기능 -->
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <!--<property name="hibernate.hbm2ddl.auto" value="create"/>-->
+            <!-- JPA 표준에 맞춘 키 생성 전략을 사용 -->
+            <property name="hibernate.id.new_generator_mappings" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>
